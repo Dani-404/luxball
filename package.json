@@ -1,6 +1,6 @@
 {
   "name": "luxball",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Script for hosting Luxball Rooms",
   "main": "./src/index.js",
   "scripts": {
@@ -8,6 +8,10 @@
   },
   "author": "Dani-404",
   "license": "ISC",
+   "repository": {
+    "type": "git",
+    "url": "git://github.com/Dani-404/luxball"
+  },
   "dependencies": {
     "@koush/wrtc": "^0.5.3",
     "@peculiar/webcrypto": "^1.5.0",
