@@ -11,7 +11,7 @@ npm i luxball
 
 ### Usage
 ```javascript
-const createRoom = require('luxball');
+import createRoom from 'luxball';
 
 createRoom({
     playerName: "Admin",
