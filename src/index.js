@@ -3532,7 +3532,6 @@ var wE = G5((xY, gY) => {
                                 }
                                 ,
                                 destroy: () => {
-                                    console.log("1")
                                     $0.VX.Xy()
                                 }
                             };
@@ -3942,14 +3941,13 @@ var wE = G5((xY, gY) => {
                             var y, D = this;
                             (y = function () {
                                 var f = 1e4 - (J.cy.now() - D.bl);
-                                f <= 0 ? console.log("test") : (J._Y(D.Jl),
+                                f <= 0 ? D.Xy() : (J._Y(D.Jl),
                                     D.Jl = J.hY(y, f + 1000))
                             }
                             )(),
                                 this.fy.oniceconnectionstatechange = function () {
                                     var f = D.fy.iceConnectionState;
 
-                                    console.log("icechange", f);
                                     f != "closed" && f != "failed" || D.Xy()
                                 }
                                 ,
