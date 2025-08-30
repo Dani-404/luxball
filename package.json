@@ -1,6 +1,6 @@
 {
   "name": "luxball",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Script for hosting Luxball Rooms",
   "main": "./src/index.js",
   "scripts": {
@@ -15,5 +15,6 @@
     "json5": "^2.2.3",
     "pako": "^2.1.0",
     "perf_hooks": "^0.0.1"
-  }
+  },
+  "type": "module"
 }

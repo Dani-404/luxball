@@ -1,9 +1,9 @@
-const JSON5 = require("json5");
-const pako = require("pako");
-const wrtc = require("@koush/wrtc");
-const { Crypto } = require("@peculiar/webcrypto");
-const { performance } = require("perf_hooks");
-const { HttpsProxyAgent } = require("https-proxy-agent");
+import JSON5 from "json5";
+import pako from "pako";
+import wrtc from "@koush/wrtc";
+import { Crypto } from "@peculiar/webcrypto";
+import { performance } from "perf_hooks";
+import { HttpsProxyAgent } from "https-proxy-agent";
 
 const crypto = new Crypto();
 
