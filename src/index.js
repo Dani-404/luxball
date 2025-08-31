@@ -10180,6 +10180,10 @@ var wE = G5((xY, gY) => {
                                 setScoreLimit: function (w) {
                                     this.C(F1.j(0, w))
                                 },
+                                setStadium: function (w) {
+                                    const parsed = U1.Utils.parseStadium(w);
+                                    this.C(jY.j(parsed))
+                                },
                                 changeTeam: function (w) {
                                     this.Ki(this.R.ej, Q6.p[w])
                                 },
@@ -67796,6 +67800,7 @@ class Gb {
                 onPlayerBallKick: J.onPlayerBallKick,
                 onGamePauseChange: J.onGamePauseChange,
                 onPlayerChatIndicatorChange: J.onPlayerChatIndicatorChange,
+                onPlayerInputChange: J.onPlayerInputChange,
                 onGameEnd: J.onGameEnd,
                 onTimeIsUp: J.onTimeIsUp,
                 onAfterStadiumChange: J.onAfterStadiumChange,
@@ -67836,6 +67841,14 @@ class Gb {
                         try {
                             Q.onTeamGoal(Z)
                         } catch ($) { }
+                }
+                ,
+                J.onPlayerInputChange = () => {
+                    if (this.emit("playerInputChange", {}),
+                        typeof Q.onPlayerInputChange === "function")
+                        try {
+                            Q.onPlayerInputChange()
+                        } catch (Z) { }
                 }
                 ,
                 J.onPlayerBallKick = () => {
@@ -68079,7 +68092,6 @@ function createRoom(Z) {
             }
             ,
             onClose: (H) => {
-                console.log("Room closed.");
                 if (Z?.onClose)
                     Z.onClose(H);
                 v6.cleanup(),
